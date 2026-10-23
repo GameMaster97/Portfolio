@@ -1,16 +1,17 @@
 main {
     display: flex;
     flex-direction: column;
-    font-family:Arial, Helvetica, sans-serif;
 }
 
 :root {
-    --bg: #111111;
+    --bg: #040404;
     --frame1: #161616;
+    --border1: #262626;
     --text: #d6d6d6;
     --soft: #999999;
     --altbg: #f2f2f2;
-    --altframe1: #d3d3d3;
+    --altframe1: #eeeeee;
+    --altborder1: #d9d9d9;
     --alttext: #111111;
     --altsoft: #555555;
 }
@@ -19,8 +20,33 @@ header {
     box-sizing: border-box;
     background-color: var(--frame1);
     margin: 0;
-    padding: 0;
+    padding: 3vh 3vw 3vh 3vw;
+    display: flex;     
+    align-items: center;       
+    justify-content: space-between;    
+    border-bottom: 2px solid var(--border1);
 }
+
+header h3 {
+    margin: 0;
+}
+
+nav ul {
+  list-style-type: none; /* Removes bullet points */
+  margin: 0;
+  padding: 0;
+  justify-content: right;
+  display: flex;         
+}
+
+nav a {
+  text-decoration: none; /* Removes underline */
+  color: #555555;
+  border-left: 1px solid #676767;
+  border-right: 1px solid #676767;
+  padding: 0 25px;
+}
+
 
 .light {
     background-color: var(--altbg);
@@ -32,15 +58,18 @@ section {
 
 body {
     background-color: var(--bg);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
 }
 
 #title {
     font-size: 6vh;
     color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 h2 {
-    font-size: 4vh;
+    font-size: 4.75vh;
     color: var(--text);
 }
 
@@ -49,8 +78,12 @@ h2 {
 }
 
 h3 {
-    font-size: 3.5vh;
+    font-size: 3.75vh;
     color: var(--text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, Helvetica, sans-serif
 }
 
 p, li {
@@ -66,4 +99,17 @@ p, li {
 #hookParagraph {
     font-size: 3.5vh;
     margin-right: 15vw;
+}
+
+.card {
+    background-color: var(--frame1);
+    border: 3px solid var(--border1);
+    border-radius: 50px;
+    margin-left: 5vw;
+    padding: 5vh 5vw;
+}
+
+.light .card {
+    background-color: var(--altframe1);
+    border: 3px solid var(--altborder1);
 }
