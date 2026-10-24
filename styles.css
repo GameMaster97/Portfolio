@@ -6,7 +6,9 @@ main {
 :root {
     --bg: #040404;
     --frame1: #161616;
+    --frame1-semitrans: #16161679;
     --border1: #262626;
+    --border1-semitrans: #2626267e;
     --text: #d6d6d6;
     --soft: #999999;
     --altbg: #f2f2f2;
@@ -17,34 +19,54 @@ main {
 }
 
 header {
-    box-sizing: border-box;
+    justify-content: space-between;    
+    border-bottom: 4px solid var(--border1-semitrans);
+    background-color: var(--frame1-semitrans)
+}
+
+footer {
+    border-top: 4px solid var(--border1);
+    justify-content: right;
     background-color: var(--frame1);
+}
+
+footer p {
+    margin: 0;
+}
+
+header, footer {
+    box-sizing: border-box;
     margin: 0;
     padding: 3vh 3vw 3vh 3vw;
     display: flex;     
     align-items: center;       
-    justify-content: space-between;    
-    border-bottom: 2px solid var(--border1);
 }
+
 
 header h3 {
     margin: 0;
 }
 
 nav ul {
-  list-style-type: none; /* Removes bullet points */
-  margin: 0;
-  padding: 0;
-  justify-content: right;
-  display: flex;         
+    list-style-type: none; /* Removes bullet points */
+    margin: 0;
+    padding: 0;
+    justify-content: right;
+    display: flex;         
+}
+
+a {
+    text-decoration: none; /* Removes underline */
+    font-weight: bold;
+    color: #27b0ff;
 }
 
 nav a {
-  text-decoration: none; /* Removes underline */
-  color: #555555;
-  border-left: 1px solid #676767;
-  border-right: 1px solid #676767;
-  padding: 0 25px;
+    color: #555555;
+    border-left: 1px solid #676767;
+    border-right: 1px solid #676767;
+    padding: 0 25px;
+    font-weight: normal;
 }
 
 
@@ -65,7 +87,9 @@ body {
 #title {
     font-size: 6vh;
     color: var(--text);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 0;
+    padding-top: 4vh;
 }
 
 h2 {
@@ -83,7 +107,7 @@ h3 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 p, li {
